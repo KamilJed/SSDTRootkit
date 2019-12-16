@@ -58,7 +58,7 @@ PULONG hookSSDT(PUCHAR syscall, PUCHAR hook) {
 	return target;
 }
 
-__declspec(naked) NTSTATUS hook(ULONG  SystemInformationClass, PVOID  SystemInformation, ULONG  SystemInformationLength, PULONG ReturnLength) {
+__declspec(naked) NTSTATUS hook() {
 	_asm {
 		push ebp
 		mov ebp, esp
